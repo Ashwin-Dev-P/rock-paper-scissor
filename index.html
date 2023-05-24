@@ -1,1 +1,107 @@
-<!-- File structure -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- XSS protection -->
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self';object-src 'none'; base-uri 'self' "
+		/>
+
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<link rel="stylesheet" type="text/css" href="./assets/css/index.css" />
+	</head>
+	<body>
+		<header>
+			<noscript>
+				<dialog open>
+					JavaScript is required for this application to work properly. Your
+					device doesn't support JavaScript
+				</dialog>
+			</noscript>
+
+			<h1 class="my-text-center">Rock Paper Scissor</h1>
+		</header>
+		<main>
+			<div>
+				<div class="my-text-center">
+					<h2>Score</h2>
+					<span
+						><span id="human_score">0</span>-<span id="computer_score"
+							>0</span
+						></span
+					>
+				</div>
+				<dialog open id="output" class="my-text-center"></dialog>
+				<div class="input-row">
+					<div class="input-item">
+						<div id="human_selection">
+							<picture>
+								<source srcset="./assets/images/human.webp" id="human_answer" />
+								<img
+									src="./assets/images/human.jpg"
+									alt="Human"
+									id="human_answer"
+									width="100%"
+								/>
+							</picture>
+						</div>
+					</div>
+					<div class="input-item">
+						<div id="computer_selection">
+							<picture>
+								<source srcset="./assets/images/computer.webp" />
+								<img
+									src="./assets/images/computer.png"
+									alt="Computer"
+									width="100%"
+									id="computer_answer"
+								/>
+							</picture>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid-3">
+				<picture class="grid-3-items">
+					<source srcset="./assets/images/rock.webp" />
+					<img
+						src="./assets/images/rock.png"
+						alt="Rock"
+						width="32%"
+						id="1"
+						class="human_options"
+					/>
+				</picture>
+
+				<picture class="grid-3-items">
+					<source srcset="./assets/images/paper.webp" />
+					<img
+						src="./assets/images/paper.png"
+						alt="paper"
+						width="32%"
+						id="2"
+						class="human_options"
+					/>
+				</picture>
+
+				<picture class="grid-3-items">
+					<source srcset="./assets/images/scissors.webp" />
+					<img
+						src="./assets/images/scissors.png"
+						alt="scissor"
+						width="32%"
+						id="3"
+						class="human_options"
+					/>
+				</picture>
+			</div>
+		</main>
+		<footer></footer>
+
+		<script defer src="./assets/js/rockPaperScissors.js"></script>
+	</body>
+</html>

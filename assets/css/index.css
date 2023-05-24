@@ -1,1 +1,130 @@
-/* File structure */
+/* * {
+	outline: 2px solid red;
+} */
+
+:root {
+	--primary-color: #4287f5;
+	--secondary-color: #cce0ff;
+}
+
+body {
+	margin: 0px;
+	background-color: var(--secondary-color);
+}
+
+header {
+	background-color: var(--primary-color);
+	padding: 1% 0%;
+	margin: 0%;
+	color: white;
+}
+
+h1 {
+	margin: 0%;
+}
+
+.img-square {
+	object-fit: cover;
+	width: 230px;
+	height: 230px;
+}
+
+.input-row {
+	display: grid;
+	grid-template-columns: 50% 50%;
+
+	width: 100%;
+}
+
+.input-item {
+	/* background-color: rgba(255, 255, 255, 0.8); */
+
+	padding: 50px;
+	font-size: 30px;
+	text-align: center;
+}
+
+.grid-3 {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	text-align: center;
+	grid-gap: 5%;
+	margin: 0% 5%;
+	/* width: 40%;
+	margin: 0% 30%;
+	
+	*/
+}
+
+.grid-3-items {
+	box-shadow: 3px 3px #888888;
+	/* background-color: rgba(255, 255, 255, 0.8); */
+
+	background-color: white;
+
+	/* For circular shape */
+	border-radius: 50%;
+	padding: 30px 0px;
+}
+
+.grid-3-items:hover {
+	transform: scale(1.05);
+	transition: 0.1s;
+}
+
+.square {
+	aspect-ratio: 1/1;
+	width: 100%;
+}
+
+.my-text-center {
+	text-align: center;
+}
+
+.my-spin {
+	--spin-duration: 0.5s;
+	-webkit-animation: spin var(--spin-duration) linear infinite;
+	-moz-animation: spin var(--spin-duration) linear infinite;
+	animation: spin var(--spin-duration) linear infinite;
+}
+
+#output {
+	padding: 1% 5%;
+	background-color: white;
+	width: 30%;
+	margin: auto;
+	border-radius: 30px;
+}
+
+@-moz-keyframes spin {
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
