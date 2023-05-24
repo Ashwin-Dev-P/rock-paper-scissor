@@ -14,7 +14,7 @@ body {
 
 header {
 	background-color: var(--primary-color);
-	padding: 1% 0%;
+	padding: 2% 0%;
 	margin: 0%;
 	color: white;
 }
@@ -33,6 +33,7 @@ h1 {
 	display: grid;
 	grid-template-columns: 50% 50%;
 
+	margin: 10% 0%;
 	width: 100%;
 }
 
@@ -88,6 +89,14 @@ h1 {
 	animation: spin var(--spin-duration) linear infinite;
 }
 
+.my-danger {
+	color: red;
+}
+
+.my-success {
+	color: green;
+}
+
 #output {
 	padding: 1% 5%;
 	background-color: white;
@@ -115,16 +124,56 @@ h1 {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+	.input-row {
+		width: 80%;
+		margin: 10% 10%;
+	}
+
+	.grid-3 {
+		width: 70%;
+		margin: 0% 15%;
+	}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+	.input-row {
+		width: 70%;
+		margin: 2% 15%;
+	}
+
+	.grid-3 {
+		width: 60%;
+		margin: 0% 20%;
+	}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+	.input-row {
+		width: 60%;
+		margin: 1% 20%;
+	}
+
+	.input-item {
+		padding: 1%;
+	}
+
+	.grid-3 {
+		width: 30%;
+		margin: 4% 35%;
+	}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+	.input-row {
+		width: 30%;
+		margin: 5% 35%;
+		grid-gap: 3px;
+	}
+
+	.input-item {
+		padding: 10% 19%;
+	}
 }

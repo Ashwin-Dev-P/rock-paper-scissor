@@ -3,6 +3,8 @@
 const human_option_images = document.getElementsByClassName("human_options");
 const human_score_span = document.getElementById("human_score");
 const computer_score_span = document.getElementById("computer_score");
+const outputDiv = document.getElementById("output");
+outputDiv.style.visibility = "hidden";
 
 // Add event listeners
 for (let option_i = 0; option_i < 3; option_i++) {
@@ -76,16 +78,24 @@ function computeResult() {
 	console.log("Computed result:", human, computer, win);
 }
 
-const outputDiv = document.getElementById("output");
 function displayResult() {
+	outputDiv.style.visibility = "visible";
 	if (win == null) {
-		outputDiv.innerHTML = "Tie";
+		outputDiv.classList.remove("my-danger");
+		outputDiv.classList.remove("my-success");
+		outputDiv.innerText = "Tie";
 	} else if (win == true) {
-		outputDiv.innerHTML = "Winner";
+		outputDiv.classList.remove("my-danger");
+		outputDiv.classList.add("my-success");
+
+		outputDiv.innerText = "You won";
 		human_score += 1;
 		human_score_span.innerText = human_score;
 	} else {
-		outputDiv.innerHTML = "You lost";
+		outputDiv.classList.remove("my-success");
+		outputDiv.classList.add("my-danger");
+
+		outputDiv.innerText = "You lost";
 		computer_score += 1;
 		computer_score_span.innerText = computer_score;
 	}
