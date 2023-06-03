@@ -4,15 +4,32 @@
 		<!-- XSS protection -->
 		<meta
 			http-equiv="Content-Security-Policy"
-			content="default-src 'self'; script-src 'self';object-src 'none'; base-uri 'self' "
-		/>
+			content="default-src 'self'; script-src 'self';object-src 'none'; base-uri 'self' " />
+
+		<meta
+			property="og:title"
+			content="Rock, paper, scissor" />
+		<meta property=”og:image” content=”./assets/images/rps.jpeg” />
+		<meta
+			property="”og:description”"
+			content="Single player 'Rock, paper, scissor' game against computer" />
+		<meta
+			property="”og:type”"
+			content="game" />
 
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 
-		<link rel="stylesheet" type="text/css" href="./assets/css/index.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="./assets/css/index.css" />
 	</head>
 	<body>
 		<header>
@@ -35,18 +52,22 @@
 						></span
 					>
 				</div>
-				<dialog open id="output" class="my-text-center"></dialog>
+				<dialog
+					open
+					id="output"
+					class="my-text-center"></dialog>
 				<div class="input-row">
 					<div class="input-item">
 						<div id="human_selection">
 							<picture>
-								<source srcset="./assets/images/human.webp" id="human_answer" />
+								<source
+									srcset="./assets/images/human.webp"
+									id="human_answer" />
 								<img
 									src="./assets/images/human.jpg"
 									alt="Human"
 									id="human_answer"
-									width="100%"
-								/>
+									width="100%" />
 							</picture>
 						</div>
 					</div>
@@ -58,8 +79,7 @@
 									src="./assets/images/computer.png"
 									alt="Computer"
 									width="100%"
-									id="computer_answer"
-								/>
+									id="computer_answer" />
 							</picture>
 						</div>
 					</div>
@@ -73,8 +93,7 @@
 						alt="Rock"
 						width="32%"
 						id="1"
-						class="human_options"
-					/>
+						class="human_options" />
 				</picture>
 
 				<picture class="grid-3-items">
@@ -84,8 +103,7 @@
 						alt="paper"
 						width="32%"
 						id="2"
-						class="human_options"
-					/>
+						class="human_options" />
 				</picture>
 
 				<picture class="grid-3-items">
@@ -95,13 +113,14 @@
 						alt="scissor"
 						width="32%"
 						id="3"
-						class="human_options"
-					/>
+						class="human_options" />
 				</picture>
 			</div>
 		</main>
 		<footer></footer>
 
-		<script defer src="./assets/js/rockPaperScissors.js"></script>
+		<script
+			defer
+			src="./assets/js/rockPaperScissors.js"></script>
 	</body>
 </html>
